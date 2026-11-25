@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maxiushka vs Huggy-Wuggy</title>
+    <!-- FIX: Added the link to your CSS file -->
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        body { background-color: black; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        canvas { background-color: black; border: 2px solid white; }
+</style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="1100" height="600"></canvas>
+    
+    <!-- The Joystick -->
+    <div id="joystick-zone">
+        <div id="joystick-base">
+            <div id="joystick-knob"></div>
+        </div>
+    </div>
+
+    <!-- The Z Button -->
+    <button id="z"> Z </button>
+    
+    <script src="game.js"></script>
+</body>
+</html>

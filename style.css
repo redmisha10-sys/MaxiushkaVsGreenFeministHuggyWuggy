@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Determination';
+    src: url('DeterminationMonoWebRegular-Z5oq.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Hachicro';
+    src: url('HachicroUndertaleBattleFontRegular-L3zlg.ttf') format('truetype');
+}
+/* Hide it on desktop, show it on touch screens */
+#joystick-zone {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+    touch-action: none; /* Prevents the screen from scrolling when you touch it */
+    display: none; 
+}
+
+@media (pointer: coarse) {
+    /* This CSS rule automatically shows the joystick ONLY on phones/tablets */
+    #joystick-zone { display: block; }
+}
+
+#joystick-base {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    position: relative;
+}
+/* ... your existing joystick CSS ... */
+
+#z {
+    width: 70px;
+    height: 70px;
+    background: rgba(200, 130, 0, 0.6);
+    color: rgb(255,255,255);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 30px;
+    right: 30px; /* Positioned on the right side for right-hand use */
+    font-size: 24px;
+    font-family: 'Determination', monospace;
+    touch-action: none;
+    display: none;
+    border: 2px solid white;
+}
+
+@media (pointer: coarse) {
+    #joystick-zone, #z { display: block; } /* Show both on mobile */
+}
+color:rgb(255,255,255);
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+}
+
+#joystick-knob {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the knob */
+}
